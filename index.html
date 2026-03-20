@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>GIRLS ZONE | THE COLLECTION</title>
+</head>
+<body>
+    <header>
+        <div class="logo">GIRLS ZONE</div>
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="#" onclick="filter('dress')">Dresses</a>
+            <a href="#" onclick="filter('jewelry')">Jewelry</a>
+            <a href="#" onclick="filter('slippers')">Slippers</a>
+            <a href="login.html">Login</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </header>
+
+    <div class="container" id="product-grid">
+        <div class="card dress">
+            <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600">
+            <h3>Pink Party Gown</h3>
+            <p style="font-size: 22px; font-weight: 800; margin: 10px 0;">₹7,999</p>
+            <button class="btn" onclick="location.href='cart.html'">ADD TO BAG</button>
+        </div>
+        <div class="card jewelry">
+            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600">
+            <h3>Diamond Set</h3>
+            <p style="font-size: 22px; font-weight: 800; margin: 10px 0;">₹24,999</p>
+            <button class="btn" onclick="location.href='cart.html'">ADD TO BAG</button>
+        </div>
+        <div class="card slippers">
+            <img src="https://images.unsplash.com/photo-1603487788393-2333939d7f99?w=600">
+            <h3>Royal Fur Slippers</h3>
+            <p style="font-size: 22px; font-weight: 800; margin: 10px 0;">₹2,999</p>
+            <button class="btn" onclick="location.href='cart.html'">ADD TO BAG</button>
+        </div>
+    </div>
+
+    <script>
+        function filter(category) {
+            let cards = document.getElementsByClassName('card');
+            for (let card of cards) {
+                card.style.display = card.classList.contains(category) ? "block" : "none";
+            }
+        }
+    </script>
+</body>
+</html>
